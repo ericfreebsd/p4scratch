@@ -1,7 +1,10 @@
-* this is the perl4 codebase modernized with a focus on linux/bsd admin tasks
+This is the perl4 codebase modernized with a focus on freenix (linux, bsd,
+dragonFly, Darwin/Mac) administrative tasks.
 
-* microsoft support is untouched and may be removed
+* support for DOS and Windows is untouched and may be removed
 
-* atari/amiga/ebcdic/whatever is definitely going to be removed
+* Atari/Amiga/EBCDIC/whatever support is definitely going to be removed
 
 * github is not the home of this project but PRs are still welcomed
+
+* no interest in CPAN or hosting other widespread sharing though others may
