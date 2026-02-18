@@ -1,5 +1,12 @@
-This is the perl4 codebase modernized with a focus on freenix (linux, bsd,
-dragonFly, Darwin/Mac) administrative tasks.
+This is the perl4 codebase modernized with a focus on freenix (Linux, BSD,
+DragonFly, Darwin/MacOS) administrative tasks. The goal is to happily build
+with C23 compilers and run on the aforementioned operating systems,
+potentially subsuming this class of existing perl5 code while encouraging a
+stable environment for new simple scripting.
+
+The intepreter is roughly 350kb and builds in seconds on modern hardware.
+After building it can run most code without even being installed, no
+complicated heirarchies of include paths necessary.
 
 * support for DOS and Windows is untouched and may be removed
 
