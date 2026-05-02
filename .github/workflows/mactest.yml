@@ -1,0 +1,14 @@
+name: Mac Build Run
+on: [push, pull_request]
+
+jobs:
+  mactest:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Quick inventory
+        run: uname -sr; cc --version; env
+      - name: Compile
+        run: sh build.sh
+      - name: Run tests
+        run: sh test.sh
