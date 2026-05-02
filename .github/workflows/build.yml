@@ -3,9 +3,11 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - name: Install dependencies
+        run: sudo apt-get install libgdbm-dev
       - name: Compile
         run: sh build.sh
       - name: Run tests
