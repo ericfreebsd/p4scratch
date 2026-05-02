@@ -6,8 +6,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Install dependencies
-        run: sudo apt-get install libgdbm-dev
       - name: Compile
         run: sh build.sh
       - name: Run tests
