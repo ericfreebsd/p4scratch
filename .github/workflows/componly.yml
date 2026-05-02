@@ -2,7 +2,7 @@ name: Compile Only
 on: [push, pull_request]
 
 jobs:
-  buildtest::
+  componly:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
