@@ -1,4 +1,4 @@
-name: Project Compile Test
+name: Basic Test
 on: [push, pull_request]
 
 jobs:
@@ -14,3 +14,5 @@ jobs:
         run: sudo apt-get install libgdbm-dev
       - name: Compile
         run: sh build.sh
+      - name: Run tests
+        run: sh test.sh
