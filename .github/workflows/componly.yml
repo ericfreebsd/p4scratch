@@ -1,4 +1,4 @@
-name: Basic Test
+name: Compile Only
 on: [push, pull_request]
 
 jobs:
