@@ -1,0 +1,14 @@
+name: Basic Test
+on: [push, pull_request]
+
+jobs:
+  buildtest::
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install dependencies
+        run: sudo apt-get install libgdbm-dev
+      - name: Quick inventory
+        run: uname -sr; cc --version; env
+      - name: Compile
+        run: sh build.sh
