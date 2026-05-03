@@ -850,10 +850,7 @@ doencodes(register STR *str, register char *s, register int len)
 }
 
 void
-do_sprintf(str,len,sarg)
-register STR *str;
-register int len;
-register STR **sarg;
+do_sprintf(register STR *str, register int len, register STR **sarg)
 {
     register char *s;
     register char *t;
@@ -1048,9 +1045,7 @@ register STR **sarg;
 }
 
 STR *
-do_push(ary,arglast)
-register ARRAY *ary;
-int *arglast;
+do_push(register ARRAY *ary, int *arglast)
 {
     register STR **st = stack->ary_array;
     register int sp = arglast[1];
@@ -1067,9 +1062,7 @@ int *arglast;
 }
 
 void
-do_unshift(ary,arglast)
-register ARRAY *ary;
-int *arglast;
+do_unshift(register ARRAY *ary, int *arglast)
 {
     register STR **st = stack->ary_array;
     register int sp = arglast[1];
@@ -1087,10 +1080,7 @@ int *arglast;
 }
 
 int
-do_subr(arg,gimme,arglast)
-register ARG *arg;
-int gimme;
-int *arglast;
+do_subr(register ARG *arg, int gimme, int *arglast)
 {
     register STR **st = stack->ary_array;
     register int sp = arglast[1];

@@ -27,8 +27,7 @@
  */
 
 #ifndef lint
-/*SUPPRESS 592*/
-static char sccsid[] = "@(#)malloc.c	4.3 (Berkeley) 9/16/83";
+/* static char sccsid[] = "@(#)malloc.c	4.3 (Berkeley) 9/16/83"; */
 
 #ifdef DEBUGGING
 #define RCHECK

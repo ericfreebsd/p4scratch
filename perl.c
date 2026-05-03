@@ -792,7 +792,6 @@ FIX YOUR KERNEL, PUT A C WRAPPER AROUND THIS SCRIPT, OR USE -u AND UNDUMP!\n");
     }
 
     magicalize("!#?^~=-%.+&*()<>,\\/[|`':\004\t\020\024\027\006");
-    userinit();		/* in case linked C routines want magical variables */
 
     amperstab = stabent("&",allstabs);
     leftstab = stabent("`",allstabs);

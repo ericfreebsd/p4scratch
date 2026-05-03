@@ -343,3 +343,17 @@ static void regset(char *bits, int def, register int c);
 static char *regbranch(int *flagp);
 static char *reg(int paren, int *flagp);
 static char *regclass(void);
+
+void do_sprintf(register STR *str, register int len, register STR **sarg);
+
+STR *do_push(register ARRAY *ary, int *arglast);
+
+void do_unshift(register ARRAY *ary, int *arglast);
+
+int do_subr(register ARG *arg, int gimme, int *arglast);
+
+long do_tell(STAB *stab);
+bool do_seek(STAB *stab, long pos, int whence);
+STR *do_fttext(register ARG *arg, STR *str);
+bool do_aexec(STR *really, int *arglast);
+void do_accept(STR *str, STAB *nstab, STAB *gstab);

@@ -158,8 +158,8 @@ aclear(register ARRAY *ar)
 
     if (!ar || !(ar->ary_flags & ARF_REAL) || ar->ary_max < 0)
 	return;
-    /*SUPPRESS 560*/
-    if (key = ar->ary_array - ar->ary_alloc) {
+    key = ar->ary_array - ar->ary_alloc;
+    if (key) {
 	ar->ary_max += key;
 	ar->ary_array -= key;
     }
@@ -176,8 +176,8 @@ afree(register ARRAY *ar)
 
     if (!ar)
 	return;
-    /*SUPPRESS 560*/
-    if (key = ar->ary_array - ar->ary_alloc) {
+    key = ar->ary_array - ar->ary_alloc;
+    if (key) {
 	ar->ary_max += key;
 	ar->ary_array -= key;
     }

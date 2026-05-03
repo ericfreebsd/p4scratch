@@ -986,8 +986,3 @@ unsigned short opargs[MAXO+1] = {
 #undef A
 #undef A5
 #endif
-
-long do_tell();
-bool do_seek();
-STR *do_push();
-STR *do_fttext();

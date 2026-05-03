@@ -44,6 +44,8 @@
  *
  */
 
+#include <unistd.h>
+
 #include "extern.h"
 #include "perl.h"
 
@@ -297,7 +299,6 @@ evalstatic(register ARG *arg)
     unsigned long tmplong;
     long tmp2;
     double exp(), log(), sqrt(), modf();
-    char *crypt();
     double sin(), cos(), atan2(), pow();
 
     if (!arg || !arg->arg_len)

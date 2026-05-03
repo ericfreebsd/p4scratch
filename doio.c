@@ -664,8 +664,7 @@ do_eof(STAB *stab)
 }
 
 long
-do_tell(stab)
-STAB *stab;
+do_tell(STAB *stab)
 {
     register STIO *stio;
 
@@ -691,10 +690,7 @@ phooey:
 }
 
 bool
-do_seek(stab, pos, whence)
-STAB *stab;
-long pos;
-int whence;
+do_seek(STAB *stab, long pos, int whence)
 {
     register STIO *stio;
 
@@ -1157,9 +1153,7 @@ mylstat(ARG *arg, STR *str)
 }
 
 STR *
-do_fttext(arg,str)
-register ARG *arg;
-STR *str;
+do_fttext(register ARG *arg, STR *str)
 {
     int i;
     int len;
@@ -1252,9 +1246,7 @@ static char **Argv = Null(char **);
 static char *Cmd = Nullch;
 
 bool
-do_aexec(really,arglast)
-STR *really;
-int *arglast;
+do_aexec(STR *really, int *arglast)
 {
     register STR **st = stack->ary_array;
     register int sp = arglast[1];
@@ -1500,10 +1492,7 @@ nuts:
 }
 
 void
-do_accept(str, nstab, gstab)
-STR *str;
-STAB *nstab;
-STAB *gstab;
+do_accept(STR *str, STAB *nstab, STAB *gstab)
 {
     register STIO *nstio;
     register STIO *gstio;
@@ -1673,8 +1662,6 @@ do_ghent(int which, int gimme, int *arglast)
     register int sp = arglast[0];
     register char **elem;
     register STR *str;
-    struct hostent *gethostbyname();
-    struct hostent *gethostbyaddr();
 #ifdef HAS_GETHOSTENT
     struct hostent *gethostent();
 #endif
@@ -1762,8 +1749,6 @@ do_gnent(int which, int gimme, int *arglast)
     register int sp = arglast[0];
     register char **elem;
     register STR *str;
-    struct netent *getnetbyname();
-    struct netent *getnetbyaddr();
     struct netent *getnetent();
     struct netent *nent;
 
@@ -1823,8 +1808,6 @@ do_gpent(int which, int gimme, int *arglast)
     register int sp = arglast[0];
     register char **elem;
     register STR *str;
-    struct protoent *getprotobyname();
-    struct protoent *getprotobynumber();
     struct protoent *getprotoent();
     struct protoent *pent;
 
@@ -1881,7 +1864,6 @@ do_gsent(int which, int gimme, int *arglast)
     register int sp = arglast[0];
     register char **elem;
     register STR *str;
-    struct servent *getservbyname();
     struct servent *getservbynumber();
     struct servent *getservent();
     struct servent *sent;
@@ -2145,8 +2127,6 @@ do_gpwent(int which, int gimme, int *arglast)
     register ARRAY *ary = stack;
     register int sp = arglast[0];
     register STR *str;
-    struct passwd *getpwnam();
-    struct passwd *getpwuid();
     struct passwd *getpwent();
     struct passwd *pwent;
 
@@ -2229,8 +2209,6 @@ do_ggrent(int which, int gimme, int *arglast)
     register int sp = arglast[0];
     register char **elem;
     register STR *str;
-    struct group *getgrnam();
-    struct group *getgrgid();
     struct group *getgrent();
     struct group *grent;
 

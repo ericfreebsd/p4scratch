@@ -706,20 +706,13 @@ STAB *genstab();
 
 ARG *fixeval();
 
-int do_subr();
-
 FCMD *load_format();
-
-bool do_aexec();
 
 int userinit();
 #ifdef CRYPTSCRIPT
 void cryptswitch();
 #endif
 
-void do_sprintf();
-void do_accept();
-void do_unshift();
 void do_execfree();
 void magicalize();
 void magicname();

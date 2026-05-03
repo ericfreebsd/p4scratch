@@ -20,7 +20,7 @@ if [ "x$UNAMES" = "xNetBSD" ]; then
     CC='gcc -DHAS_SETRGID -DHAS_SETRUID -DHAS_SYSCALL -DPWCHANGE -DPWCLASS -DPWEXPIRE -DHAS_SETPGRP -DCSH="/bin/csh"'
 fi
 if [ "x$UNAMES" = "xLinux" ]; then
-    CC="gcc -DI_TIME -DI_GDBM -DHAS_GDBM -DHAS_SYSCALL"
+    CC="gcc -Wno-implicit-function-declaration -Wno-implicit-int -Wno-incompatible-pointer-types -Wno-int-conversion -DI_TIME -DI_GDBM -DHAS_GDBM -DHAS_SYSCALL"
     ADLIB="-lgdbm -lm -lcrypt"
 fi
 if [ "x$UNAMES" = "xDarwin" ]; then
@@ -50,9 +50,6 @@ $CC -O -pipe  -I$idir     -c stab.c
 $CC -O -pipe  -I$idir     -c str.c
 $CC -O -pipe  -I$idir     -c toke.c
 $CC -O -pipe  -I$idir     -c util.c
-$CC -O -pipe  -I$idir     -c usersub.c
-cc -O -pipe -o perl array.o cmd.o cons.o consarg.o doarg.o doio.o dolist.o dump.o eval.o form.o hash.o malloc.o perl.o perly.o regcomp.o regexec.o stab.o str.o toke.o util.o usersub.o $ADLIB
-
-#gzip -cn perl.1 > perl.1.gz
+cc -O -pipe -o perl array.o cmd.o cons.o consarg.o doarg.o doio.o dolist.o dump.o eval.o form.o hash.o malloc.o perl.o perly.o regcomp.o regexec.o stab.o str.o toke.o util.o $ADLIB
 
 ls -l perl

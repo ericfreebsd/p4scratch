@@ -1158,7 +1158,7 @@ reginsert(char op, char *opnd)
 	register char *src;
 	register char *dst;
 	register char *place;
-	register offset = (op == CURLY ? 4 : 0);
+	register int offset = (op == CURLY ? 4 : 0);
 
 	if (regcode == &regdummy) {
 #ifdef REGALIGN

@@ -77,6 +77,7 @@
 
 #include <sys/resource.h>
 #include <sys/types.h>
+#include <sys/socket.h>
 #include <sys/wait.h>
 #include <grp.h>
 #include <netdb.h>
