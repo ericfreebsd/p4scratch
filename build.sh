@@ -25,7 +25,6 @@ if [ "x$UNAMES" = "xLinux" ]; then
 fi
 if [ "x$UNAMES" = "xDarwin" ]; then
     CC="clang -Wno-int-conversion -Wno-implicit-function-declaration"
-    ADLIB="-lm -lcrypto"
 fi
 
 idir=`pwd`
