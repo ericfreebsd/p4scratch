@@ -24,7 +24,7 @@ if [ "x$UNAMES" = "xLinux" ]; then
     ADLIB="-lgdbm -lm -lcrypt"
 fi
 if [ "x$UNAMES" = "xDarwin" ]; then
-    CC="clang -Wno-int-conversion"
+    CC="clang -Wno-int-conversion -Wno-implicit-function-declaration"
     ADLIB="-lm -lcrypto"
 fi
 
