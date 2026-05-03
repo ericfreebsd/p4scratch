@@ -6,7 +6,7 @@ if [ ! -x perl ]; then
 fi
 
 # skip problematic test under some conditions
-if [ "x$GITHUB_RUN_ID" = "x" ]; then
+if [ "x$GITHUB_RUN_ID" != "x" ]; then
   rm t/op/stat.t
 fi
 
